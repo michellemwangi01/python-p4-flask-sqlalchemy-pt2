@@ -11,7 +11,7 @@ class Owner(db.Model):
     __tablename__ = 'owners'
 
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String, unique=True)
+    name = db.Column(db.String, unique=False)
 
     pets = db.relationship('Pet', backref='owner')
 
